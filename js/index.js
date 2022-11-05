@@ -26,3 +26,12 @@ INSTRUCTIONS:
 
 // Once you have read the above messages, you can delete all comments. 
 "use strict";
+ var min = Number.MAX_VALUE;
+    for (var i = 0; i < a.length - 1; i++) {
+        for (var j = i + 1; j < a.length; j++) {
+            if ( min > Math.abs(i - j)&& a[i] === a[j]) {
+                min = Math.abs(i - j);
+            }
+        }
+    }
+    return min === Number.MAX_VALUE ? -1 : min;
